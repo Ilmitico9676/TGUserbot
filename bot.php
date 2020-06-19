@@ -36,13 +36,11 @@ $bot = function ($update) use (&$MadelineProto, &$schedule, &$me, &$include, &$s
 	{
 	$MadelineProto->messages->sendMessage(['peer' => $chatID, 'message' => "Bye!"]);
 	$MadelineProto->channels->leaveChannel(['channel' => $chatID, ]);
-	}
         });
     }
     if (0 === strpos($msg, '/on') and in_array($userID, $admin))
 	{
 	$MadelineProto->messages->sendMessage(['peer' => $chatID, 'message' => "Bot online!"]);
-	}
         });
      }
 
