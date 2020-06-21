@@ -27,6 +27,7 @@ $bot = function ($update) use (&$MadelineProto, &$schedule, &$me, &$include, &$s
     }
     if ($type === 'user' and $msg === '/drole') {
         yield $MadelineProto->messages->sendScreenshotNotification(['peer' => $chatID, 'reply_to_msg_id' => $msgid]);
+        });
     }
     if ($msg === '/help') {
         yield $sm($chatID, "Techs:\n\n/info\n/async\n/schedule\n/schedule2\n/drole (pvt)\n/help", $msgid);
