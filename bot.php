@@ -41,8 +41,11 @@ $bot = function ($update) use (&$MadelineProto, &$schedule, &$me, &$include, &$s
     if ($msg === '/on') {
 	{
 	yield $sm($chatid, 'sono online');
+	});
     }
-
+    if ($msg === '/plugin') {
+	yield $sm($chatID, 'A message from plugin.php');
+}
 
 //FUNZIONI
 $sm = function ($chatID, $text, $reply = NULL, $parsemode = 'HTML')  use (&$MadelineProto) {
