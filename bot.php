@@ -34,7 +34,6 @@ $bot = function ($update) use (&$MadelineProto, &$schedule, &$me, &$include, &$s
         });
     }
 
-
 //FUNZIONI
 $sm = function ($chatID, $text, $reply = NULL, $parsemode = 'HTML')  use (&$MadelineProto) {
     if (isset($reply)) return yield $MadelineProto->messages->sendMessage(['peer' => $chatID, 'message' => $text, 'reply_to_msg_id' => $reply, 'parse_mode' => $parsemode]);
