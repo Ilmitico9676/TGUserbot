@@ -32,20 +32,7 @@ $bot = function ($update) use (&$MadelineProto, &$schedule, &$me, &$include, &$s
         yield $sm($chatID, "Techs:\n\n/info\n/async\n/schedule\n/schedule2\n/drole (pvt)\n/help", $msgid);
         });
     }
-    if ($msg === '/leave') {
-	{
-	$MadelineProto->messages->sendMessage(['peer' => $chatID, 'message' => "Bye!"]);
-	$MadelineProto->channels->leaveChannel(['channel' => $chatID, ]);
-        });
-    }
-    if ($msg === '/on') {
-	{
-	yield $sm($chatid, 'sono online');
-	});
-    }
-    if ($msg === '/plugin') {
-	yield $sm($chatID, 'A message from plugin.php');
-}
+
 
 //FUNZIONI
 $sm = function ($chatID, $text, $reply = NULL, $parsemode = 'HTML')  use (&$MadelineProto) {
